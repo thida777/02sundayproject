@@ -362,3 +362,199 @@ body {
   width: 15px;
   height: 15px;
 }
+/* card */
+/* ============================================================
+   Spotlight carousel — append this to the END of your css/styles.css
+   Namespaced with "bkspot-" prefix and scoped variables on
+   .bkspot-rail, so it can't collide with .card / .book-card,
+   Bootstrap classes, or your global --cream / --line variables.
+   ============================================================ */
+
+.bkspot-rail {
+  --bkspot-card-bg: #3a2415;
+  --bkspot-card-bg-2: #7a5232;
+  --bkspot-gold: #e8c873;
+  --bkspot-cream: #f3e6cf;
+  --bkspot-line: rgba(232, 200, 115, 0.35);
+
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 20px 0 40px;
+  font-family: "Noto Serif Khmer", "Khmer OS", serif;
+}
+
+.bkspot-rail * {
+  box-sizing: border-box;
+}
+
+.bkspot-rail-top-line {
+  width: 120px;
+  height: 2px;
+  background: var(--bkspot-line);
+  margin: 0 auto 18px auto;
+}
+
+.bkspot-scroller {
+  overflow: hidden;
+  padding: 4px 0 8px 0;
+  -webkit-mask-image: linear-gradient(
+    90deg,
+    transparent,
+    #000 4%,
+    #000 96%,
+    transparent
+  );
+  mask-image: linear-gradient(
+    90deg,
+    transparent,
+    #000 4%,
+    #000 96%,
+    transparent
+  );
+}
+
+.bkspot-track {
+  display: flex;
+  gap: 20px;
+  width: max-content;
+  transition: transform 0.8s ease;
+}
+
+.bkspot-card {
+  flex: 0 0 auto;
+  width: 780px;
+  max-width: 88vw;
+  background: linear-gradient(
+    160deg,
+    var(--bkspot-card-bg),
+    var(--bkspot-card-bg-2)
+  );
+  border-radius: 18px;
+  padding: 26px 30px;
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+.bkspot-cover {
+  flex: 0 0 170px;
+  width: 170px;
+  height: 250px;
+  border-radius: 6px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+  background: radial-gradient(
+    circle at 50% 30%,
+    #c9853f 0%,
+    #8a4a2a 55%,
+    #4a2c1a 100%
+  );
+}
+
+.bkspot-cover .bkspot-banner {
+  position: absolute;
+  top: 10px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  color: var(--bkspot-gold);
+  font-size: 9px;
+  letter-spacing: 0.5px;
+  opacity: 0.85;
+}
+
+.bkspot-cover .bkspot-title-plate {
+  position: absolute;
+  bottom: 34px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  color: var(--bkspot-gold);
+  font-weight: 700;
+  font-size: 15px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.bkspot-cover .bkspot-imprint {
+  position: absolute;
+  bottom: 8px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  color: var(--bkspot-cream);
+  font-size: 9px;
+  opacity: 0.8;
+}
+
+.bkspot-cover .bkspot-figure {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  font-size: 70px;
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.5));
+  opacity: 0.9;
+}
+
+.bkspot-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.bkspot-content h2 {
+  margin: 6px 0 14px 0;
+  color: var(--bkspot-gold);
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.bkspot-content p {
+  margin: 0;
+  color: var(--bkspot-cream);
+  font-size: 16px;
+  line-height: 1.85;
+  opacity: 0.95;
+}
+
+.bkspot-cta-wrap {
+  text-align: center;
+  margin-top: 26px;
+}
+
+.bkspot-cta {
+  display: inline-block;
+  padding: 10px 28px;
+  border-radius: 20px;
+  border: 1px solid var(--bkspot-gold);
+  color: var(--bkspot-gold);
+  font-size: 14px;
+  text-decoration: none;
+  background: transparent;
+}
+
+@media (max-width: 640px) {
+  .bkspot-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .bkspot-cover {
+    width: 150px;
+    height: 220px;
+  }
+  .bkspot-content h2 {
+    font-size: 22px;
+  }
+}
+.bkspot-cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}

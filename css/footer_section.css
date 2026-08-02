@@ -1,0 +1,273 @@
+/* ============================================================
+   "Why Choose Us" + Newsletter + Footer partial styles.
+   Append this to the END of your css/styles.css.
+   Prefixed "sf-" (site footer) so it can't collide with your
+   existing .card / .book-card / Bootstrap classes.
+   ============================================================ */
+
+.sf-wrap {
+  --sf-bg: #3a2415;
+  --sf-bg-soft: #4a2f1c;
+  --sf-cream: #f4ead8;
+  --sf-copper: #c9895a;
+  --sf-copper-dark: #b5744a;
+  --sf-line: rgba(244, 234, 216, 0.14);
+
+  background: var(--sf-bg);
+  color: var(--sf-cream);
+  font-family: "Inter", sans-serif;
+  border-top: 4px solid var(--sf-copper);
+}
+
+.sf-wrap * {
+  box-sizing: border-box;
+}
+.sf-wrap a {
+  text-decoration: none;
+}
+
+/* ---------- Why Choose Us ---------- */
+.sf-why {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px 20px 30px;
+}
+
+.sf-why-heading {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.sf-why-heading h2 {
+  font-family: "Fraunces", serif;
+  font-weight: 600;
+  font-size: 1.9rem;
+  color: var(--sf-cream);
+  position: relative;
+  display: inline-block;
+  margin: 0;
+}
+
+.sf-why-heading h2::after {
+  content: "";
+  display: block;
+  width: 48px;
+  height: 2px;
+  background: var(--sf-copper);
+  margin: 12px auto 0;
+}
+
+.sf-why-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.sf-why-icon {
+  font-size: 1.8rem;
+  color: var(--sf-copper);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.sf-why-title {
+  font-weight: 600;
+  font-size: 1.02rem;
+  color: var(--sf-cream);
+  margin-bottom: 2px;
+}
+
+.sf-why-text {
+  font-size: 0.88rem;
+  color: rgba(244, 234, 216, 0.65);
+  line-height: 1.4;
+}
+
+/* ---------- Newsletter ---------- */
+.sf-newsletter {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 10px 20px 30px;
+}
+
+.sf-newsletter-box {
+  background: var(--sf-bg-soft);
+  border: 1px solid var(--sf-line);
+  border-radius: 10px;
+  padding: 24px 28px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.sf-newsletter-left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.sf-newsletter-icon {
+  font-size: 1.6rem;
+  color: var(--sf-copper);
+}
+
+.sf-newsletter-title {
+  font-family: "Fraunces", serif;
+  font-weight: 600;
+  font-size: 1.15rem;
+  color: var(--sf-cream);
+}
+
+.sf-newsletter-text {
+  font-size: 0.88rem;
+  color: rgba(244, 234, 216, 0.65);
+}
+
+.sf-newsletter-form {
+  display: flex;
+  gap: 10px;
+  flex: 1;
+  min-width: 280px;
+  max-width: 460px;
+}
+
+.sf-newsletter-input {
+  flex: 1;
+  background: rgba(244, 234, 216, 0.06);
+  border: 1px solid var(--sf-line);
+  border-radius: 6px;
+  padding: 0.6rem 0.9rem;
+  color: var(--sf-cream);
+  font-size: 0.92rem;
+}
+
+.sf-newsletter-input::placeholder {
+  color: rgba(244, 234, 216, 0.45);
+}
+
+.sf-newsletter-input:focus {
+  outline: none;
+  border-color: var(--sf-copper);
+}
+
+.sf-newsletter-btn {
+  background: var(--sf-copper);
+  color: var(--sf-bg);
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  padding: 0.6rem 1.2rem;
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: background 0.15s ease;
+}
+
+.sf-newsletter-btn:hover {
+  background: var(--sf-copper-dark);
+}
+
+/* ---------- Footer columns ---------- */
+.sf-footer {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 30px 20px 20px;
+  border-top: 1px solid var(--sf-line);
+}
+
+.sf-col-title {
+  font-family: "Fraunces", serif;
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: var(--sf-copper);
+  margin-bottom: 12px;
+}
+
+.sf-about-text {
+  font-size: 0.88rem;
+  color: rgba(244, 234, 216, 0.65);
+  line-height: 1.5;
+  margin-bottom: 14px;
+}
+
+.sf-socials {
+  display: flex;
+  gap: 10px;
+}
+
+.sf-socials a {
+  width: 34px;
+  height: 34px;
+  border-radius: 6px;
+  background: var(--sf-bg-soft);
+  color: var(--sf-cream);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.15s ease;
+}
+
+.sf-socials a:hover {
+  background: var(--sf-copper);
+  color: var(--sf-bg);
+}
+
+.sf-link-list,
+.sf-contact-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sf-link-list li {
+  margin-bottom: 9px;
+}
+
+.sf-link-list a {
+  color: rgba(244, 234, 216, 0.75);
+  font-size: 0.9rem;
+  transition: color 0.15s ease;
+}
+
+.sf-link-list a:hover {
+  color: var(--sf-copper);
+}
+
+.sf-contact-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 0.88rem;
+  color: rgba(244, 234, 216, 0.75);
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+
+.sf-contact-list i {
+  color: var(--sf-copper);
+  margin-top: 2px;
+}
+
+/* ---------- Bottom bar ---------- */
+.sf-bottom {
+  text-align: center;
+  padding: 16px 20px;
+  border-top: 1px solid var(--sf-line);
+  font-size: 0.85rem;
+  color: rgba(244, 234, 216, 0.55);
+}
+
+@media (max-width: 767px) {
+  .sf-newsletter-box {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .sf-newsletter-form {
+    width: 100%;
+    max-width: none;
+  }
+}
