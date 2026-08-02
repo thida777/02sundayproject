@@ -103,7 +103,257 @@
   font-family: Georgia, serif;
   font-size: 20px;
 }
-.btn-outline-light:hover {
-  background-color: white;
-  color: #432719; /* your navbar color */
+
+:root {
+  --bg: #3a2415;
+  --bg-soft: #4a2f1c;
+  --cream: #f4ead8;
+  --tan: #e9dcc3;
+  --copper: #c9895a;
+  --copper-dark: #b5744a;
+  --line: rgba(244, 234, 216, 0.18);
+}
+
+body {
+  background: var(--bg);
+  font-family: "Inter", sans-serif;
+  color: var(--cream);
+}
+
+.page-wrap {
+  max-width: 900px;
+}
+
+/* ---------- Filter bar ---------- */
+.filter-btn {
+  background: var(--cream);
+  border: none;
+  border-radius: 6px;
+  color: #3a2415;
+  font-family: "Inter", sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  padding: 0.85rem 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.6rem;
+  width: 100%;
+  transition: background 0.15s ease;
+}
+
+.filter-btn::after {
+  display: none;
+}
+
+.filter-btn:hover {
+  background: #fff;
+  color: #3a2415;
+}
+
+.filter-btn .chev {
+  width: 11px;
+  height: 11px;
+  flex-shrink: 0;
+  opacity: 0.6;
+  transition: transform 0.18s ease;
+}
+
+.filter-btn[aria-expanded="true"] .chev {
+  transform: rotate(180deg);
+}
+
+.dropdown-menu {
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.35);
+  padding: 0.4rem;
+  margin-top: 8px !important;
+  background: var(--cream);
+}
+
+.dropdown-item {
+  font-family: "Inter", sans-serif;
+  font-size: 0.92rem;
+  color: #3a2415;
+  padding: 0.55rem 0.75rem;
+  border-radius: 5px;
+  font-weight: 500;
+}
+
+.dropdown-item:hover,
+.dropdown-item:focus {
+  background: rgba(58, 36, 21, 0.08);
+  color: #3a2415;
+}
+
+.search-btn {
+  background: transparent;
+  color: var(--copper);
+  border: 1.5px solid var(--copper);
+  border-radius: 6px;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 0.85rem 1.2rem;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55rem;
+  transition:
+    background 0.15s ease,
+    color 0.15s ease;
+}
+
+.search-btn:hover {
+  background: var(--copper);
+  color: var(--bg);
+}
+
+.search-btn svg {
+  width: 15px;
+  height: 15px;
+}
+
+/* ---------- Section headers ---------- */
+.section-heading {
+  font-family: "Fraunces", serif;
+  font-weight: 600;
+  font-size: 1.4rem;
+  color: var(--cream);
+  text-align: center;
+  position: relative;
+  display: inline-block;
+}
+
+.section-heading::after {
+  content: "";
+  display: block;
+  width: 46px;
+  height: 2px;
+  background: var(--copper);
+  margin: 10px auto 0;
+}
+
+.section-heading-wrap {
+  text-align: center;
+}
+
+/* ---------- Suggestion cards ---------- */
+.suggest-card {
+  background: var(--bg-soft);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 1.6rem 1rem;
+  text-align: center;
+  height: 100%;
+  transition:
+    transform 0.15s ease,
+    border-color 0.15s ease;
+}
+
+.suggest-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--copper);
+}
+
+.suggest-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  border: 1.5px solid var(--copper);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem;
+  color: var(--copper);
+}
+
+.suggest-icon svg {
+  width: 22px;
+  height: 22px;
+}
+
+.suggest-title {
+  font-family: "Fraunces", serif;
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: var(--cream);
+  margin-bottom: 0.2rem;
+}
+
+.suggest-count {
+  font-size: 0.85rem;
+  color: rgba(244, 234, 216, 0.6);
+}
+
+/* ---------- Book cards ---------- */
+.book-card {
+  background: var(--bg-soft);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 1.4rem 1.2rem 1.6rem;
+  height: 100%;
+  text-align: center;
+}
+
+.book-cover {
+  max-width: 130px;
+  margin: 0 auto 1.2rem;
+  border-radius: 3px;
+  overflow: hidden;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.4);
+}
+
+.book-cover img {
+  width: 100%;
+  display: block;
+}
+
+.book-title {
+  font-family: "Fraunces", serif;
+  font-weight: 600;
+  font-size: 1.15rem;
+  color: var(--cream);
+  margin-bottom: 0.3rem;
+}
+
+.book-author {
+  font-size: 0.9rem;
+  color: rgba(244, 234, 216, 0.65);
+  margin-bottom: 0.5rem;
+}
+
+.book-price {
+  font-family: "Fraunces", serif;
+  font-weight: 600;
+  font-size: 1.15rem;
+  color: var(--cream);
+  margin-bottom: 1rem;
+}
+
+.add-cart-btn {
+  background: var(--copper);
+  color: var(--bg);
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.88rem;
+  padding: 0.6rem 1rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: background 0.15s ease;
+}
+
+.add-cart-btn:hover {
+  background: var(--copper-dark);
+  color: var(--bg);
+}
+
+.add-cart-btn svg {
+  width: 15px;
+  height: 15px;
 }
