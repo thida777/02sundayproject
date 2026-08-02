@@ -103,7 +103,7 @@
   font-family: Georgia, serif;
   font-size: 20px;
 }
-
+/* body */
 :root {
   --bg: #3a2415;
   --bg-soft: #4a2f1c;
@@ -163,6 +163,10 @@ body {
   transform: rotate(180deg);
 }
 
+.dropdown {
+  position: relative;
+}
+
 .dropdown-menu {
   border: none;
   border-radius: 8px;
@@ -193,15 +197,16 @@ body {
   border: 1.5px solid var(--copper);
   border-radius: 6px;
   font-family: "Inter", sans-serif;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 0.95rem;
-  padding: 0.85rem 1.2rem;
+  padding: 0.85rem 1.4rem;
   width: 100%;
   height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 0.55rem;
+  white-space: nowrap;
   transition:
     background 0.15s ease,
     color 0.15s ease;
@@ -213,8 +218,8 @@ body {
 }
 
 .search-btn svg {
-  width: 15px;
-  height: 15px;
+  width: 16px;
+  height: 16px;
 }
 
 /* ---------- Section headers ---------- */
