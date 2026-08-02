@@ -1,0 +1,109 @@
+.custom-navbar {
+  background-color: #432719;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+}
+
+.custom-navbar .navbar-brand {
+  color: #f5e9d9;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.custom-navbar .nav-link {
+  color: #f5e9d9;
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.custom-navbar .nav-link:hover,
+.custom-navbar .nav-link:focus-visible {
+  color: #e8b4bc;
+  transform: translateY(-1px);
+}
+
+.custom-navbar .nav-link:active {
+  color: #e8b4bc;
+  transform: translateY(0px);
+}
+
+.custom-navbar .nav-link.active {
+  color: #e8b4bc;
+  border-bottom: 2px solid #e8b4bc;
+}
+
+.custom-navbar .navbar-toggler {
+  border-color: #e8b4bc;
+  transition: filter 0.2s ease;
+}
+
+.custom-navbar .navbar-toggler:hover {
+  filter: brightness(1.15);
+}
+
+.custom-navbar .navbar-toggler-icon {
+  filter: invert(1);
+}
+/* booK  image*/
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 510px;
+  overflow: hidden;
+}
+
+.hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-text {
+  position: absolute;
+  top: 40px;
+  left: 50px;
+  color: white;
+}
+
+.hero-text h1 {
+  font-size: 55px;
+  font-family: Georgia, serif;
+  line-height: 1.1;
+  font-weight: bold;
+}
+
+.hero-text span {
+  color: #e8b4bc;
+}
+.shop-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  background-color: #954923;
+  color: white;
+  text-decoration: none;
+
+  padding: 12px 24px;
+  border-radius: 30px;
+  font-size: 18px;
+  font-weight: 600;
+
+  transition: all 0.3s ease;
+}
+
+.shop-btn:hover {
+  background-color: #e8b4bc;
+  color: #432719;
+  transform: translateY(-2px);
+}
+
+.shop-btn i {
+  font-family: Georgia, serif;
+  font-size: 20px;
+}
+.btn-outline-light:hover {
+  background-color: white;
+  color: #432719; /* your navbar color */
+}
