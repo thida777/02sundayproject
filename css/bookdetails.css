@@ -1,0 +1,168 @@
+:root {
+  --bg: #7a4a2b;
+  --bg-dark: #2b1d14;
+  --card-bg: #ffffff;
+  --star: #f2b705;
+  --star-empty: #d8d8d8;
+  --text-light: #f5efe6;
+  --text-muted: #d8c3a5;
+  --author: #b8895a;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: var(--bg);
+  padding: 40px 20px 0;
+}
+
+h1.page-title {
+  text-align: center;
+  color: var(--text-light);
+  font-weight: 600;
+  font-size: 1.6rem;
+  margin: 0 0 8px;
+}
+
+.title-underline {
+  width: 60px;
+  height: 2px;
+  background: var(--text-muted);
+  margin: 0 auto 36px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(160px, 1fr));
+  gap: 28px 24px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.cover {
+  width: 100%;
+  aspect-ratio: 2 / 3;
+  border-radius: 4px;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.35);
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 12px;
+  line-height: 1.3;
+}
+
+.book-title {
+  color: var(--text-light);
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin: 2px 0 2px;
+}
+
+.book-author {
+  color: var(--author);
+  font-size: 0.8rem;
+  margin: 0 0 6px;
+}
+
+.stars {
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+  margin-bottom: 6px;
+}
+
+.stars .filled {
+  color: var(--star);
+}
+.stars .empty {
+  color: var(--star-empty);
+}
+
+.price {
+  color: var(--text-light);
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+footer {
+  margin-top: 50px;
+  background: var(--bg-dark);
+  padding: 24px 20px;
+  text-align: center;
+  color: var(--text-light);
+}
+
+@media (max-width: 600px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+body {
+  background-color: #8a5a3c;
+  color: #fff;
+  font-family: "Segoe UI", Arial, sans-serif;
+  padding: 40px 0;
+}
+
+.page-title {
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 40px;
+  letter-spacing: 0.5px;
+}
+
+.book-card {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.book-cover {
+  width: 100%;
+  max-width: 170px;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 4px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  margin-bottom: 12px;
+}
+
+.book-title {
+  font-weight: 700;
+  font-size: 1rem;
+  margin-bottom: 2px;
+}
+
+.book-author {
+  font-size: 0.85rem;
+  color: #f0e4da;
+  margin-bottom: 6px;
+}
+
+.book-stars {
+  color: #ffd23f;
+  font-size: 0.9rem;
+  margin-bottom: 6px;
+}
+
+.book-stars .empty {
+  color: rgba(255, 255, 255, 0.35);
+}
+
+.book-price {
+  font-weight: 700;
+  font-size: 1rem;
+}

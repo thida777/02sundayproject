@@ -1,0 +1,308 @@
+/* ===== Contact page (Luna Bookstore) =====
+   Scoped under .contact-page so it doesn't leak into
+   home.html / shopping_cart.html / categories.html
+========================================================= */
+
+.contact-page {
+  --night: #3a2415;
+  --night-2: #4f2b0a;
+  --card: #f6f0e2;
+  --card-line: #ddd2b4;
+  --gold: #cf9f3f;
+  --gold-light: #e8b4bc;
+  --ink: #f4f1e8;
+  --muted: #f5e9d9;
+  --error: #c97b6a;
+
+  background: radial-gradient(ellipse at 15% 20%, #3a2415 0%, var(--night) 55%);
+  font-family: "Inter", sans-serif;
+  color: var(--ink);
+  padding: 56px 16px;
+}
+
+.contact-page * {
+  box-sizing: border-box;
+}
+
+.contact-page .contact-wrap {
+  max-width: 1040px;
+  margin: 0 auto;
+  background: var(--night-2);
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 40px 80px -30px rgba(0, 0, 0, 0.6);
+}
+
+/* ---- Left: info column ---- */
+.contact-page .contact-info {
+  padding: 56px 48px;
+  position: relative;
+  overflow: hidden;
+}
+.contact-page .moon {
+  position: absolute;
+  top: -60px;
+  right: -60px;
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 35%, #b86840, transparent 70%);
+  opacity: 0.6;
+}
+.contact-page .stars {
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(
+      1.5px 1.5px at 20% 30%,
+      rgba(255, 255, 255, 0.35),
+      transparent
+    ),
+    radial-gradient(
+      1.5px 1.5px at 70% 15%,
+      rgba(255, 255, 255, 0.25),
+      transparent
+    ),
+    radial-gradient(1px 1px at 85% 55%, rgba(255, 255, 255, 0.3), transparent),
+    radial-gradient(1px 1px at 40% 70%, rgba(255, 255, 255, 0.2), transparent),
+    radial-gradient(
+      1.5px 1.5px at 60% 85%,
+      rgba(255, 255, 255, 0.25),
+      transparent
+    );
+  pointer-events: none;
+}
+.contact-page .eyebrow {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 12px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gold-light);
+  font-weight: 600;
+  margin-bottom: 28px;
+}
+.contact-page .eyebrow svg {
+  width: 16px;
+  height: 16px;
+}
+.contact-page .eyebrow::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(231, 200, 118, 0.5), transparent);
+}
+.contact-page h1 {
+  position: relative;
+  font-family: "Fraunces", serif;
+  font-weight: 500;
+  font-size: 44px;
+  line-height: 1.12;
+  margin: 0 0 20px;
+  letter-spacing: -0.01em;
+}
+.contact-page h1 em {
+  font-style: italic;
+  font-weight: 300;
+  color: var(--gold-light);
+}
+.contact-page .lede {
+  position: relative;
+  color: var(--muted);
+  font-size: 15.5px;
+  line-height: 1.65;
+  max-width: 38ch;
+  margin-bottom: 44px;
+}
+.contact-page .contact-rows {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.contact-page .row-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 14px 4px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+.contact-page .row-item:last-child {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+.contact-page .row-item .ic {
+  width: 34px;
+  height: 34px;
+  flex: 0 0 auto;
+  border-radius: 50%;
+  border: 1px solid rgba(231, 200, 118, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gold-light);
+}
+.contact-page .row-item .ic svg {
+  width: 15px;
+  height: 15px;
+}
+.contact-page .row-item .txt {
+  display: flex;
+  flex-direction: column;
+}
+.contact-page .row-item .txt .label {
+  font-size: 10.5px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #f5e9d9;
+}
+.contact-page .row-item .txt .val {
+  font-size: 14.5px;
+  color: var(--ink);
+}
+
+/* ---- Right: form column ---- */
+.contact-page .contact-form-side {
+  background: var(--card);
+  color: #2a2415;
+  padding: 52px 46px;
+  position: relative;
+}
+.contact-page .card-label {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 26px;
+  padding-bottom: 16px;
+  border-bottom: 1.5px dashed var(--card-line);
+}
+.contact-page .card-label .no {
+  font-family: "Fraunces", serif;
+  font-style: italic;
+  font-size: 14px;
+  color: #8a7a4a;
+}
+.contact-page .card-label .ttl {
+  font-family: "Fraunces", serif;
+  font-weight: 600;
+  font-size: 20px;
+  color: #2a2415;
+}
+.contact-page .field label {
+  display: block;
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #8a7a4a;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+.contact-page .field .req {
+  color: var(--error);
+  margin-left: 2px;
+}
+.contact-page .field input,
+.contact-page .field textarea {
+  width: 100%;
+  border: none;
+  border-bottom: 1.5px solid var(--card-line);
+  background: transparent;
+  padding: 6px 2px 10px;
+  font-family: "Inter", sans-serif;
+  font-size: 15px;
+  color: #2a2415;
+  outline: none;
+  transition: border-color 0.2s ease;
+  resize: none;
+}
+.contact-page .field input::placeholder,
+.contact-page .field textarea::placeholder {
+  color: #b6ac8e;
+}
+.contact-page .field input:focus,
+.contact-page .field textarea:focus {
+  border-color: var(--gold);
+}
+.contact-page .field textarea {
+  min-height: 88px;
+  line-height: 1.5;
+}
+
+.contact-page button[type="submit"] {
+  margin-top: 20px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: #2a2415;
+  color: var(--gold-light);
+  border: none;
+  padding: 15px 30px;
+  border-radius: 999px;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 0.03em;
+  cursor: pointer;
+  transition:
+    transform 0.15s ease,
+    background 0.2s ease;
+}
+.contact-page button[type="submit"]:hover {
+  background: #3a3220;
+  transform: translateY(-1px);
+}
+.contact-page button[type="submit"] svg {
+  width: 15px;
+  height: 15px;
+  transition: transform 0.15s ease;
+}
+.contact-page button[type="submit"]:hover svg {
+  transform: translateX(3px);
+}
+.contact-page button:focus-visible,
+.contact-page .field input:focus-visible,
+.contact-page .field textarea:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 2px;
+}
+
+.contact-page .stamp {
+  position: absolute;
+  bottom: 44px;
+  right: 46px;
+  font-family: "Fraunces", serif;
+  font-style: italic;
+  font-size: 12px;
+  color: #b6ac8e;
+  border: 1px solid #cbbf9a;
+  border-radius: 50%;
+  width: 64px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  line-height: 1.2;
+  transform: rotate(-8deg);
+  opacity: 0.7;
+}
+
+@media (max-width: 991px) {
+  .contact-page .contact-info,
+  .contact-page .contact-form-side {
+    padding: 44px 32px;
+  }
+  .contact-page h1 {
+    font-size: 34px;
+  }
+  .contact-page .stamp {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .contact-page * {
+    transition: none !important;
+  }
+}

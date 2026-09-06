@@ -8,6 +8,10 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
     <script>
       document.addEventListener("DOMContentLoaded", () => {
@@ -19,6 +23,13 @@
         });
       });
     </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/footer_section.css" />
+    <link rel="stylesheet" href="css/contact_styple.css" />
     <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
@@ -57,5 +68,284 @@
         </div>
       </div>
     </nav>
+
+    <!-- contact us body -->
+    <section class="contact-page">
+      <div class="container">
+        <div class="row justify-content-center contact-wrap g-0">
+          <div class="col-lg-5 contact-info">
+            <div class="stars"></div>
+            <div class="moon"></div>
+
+            <div class="eyebrow">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+              >
+                <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" />
+              </svg>
+              Luna Bookstore
+            </div>
+
+            <h1>Let's talk<br /><em>about your project.</em></h1>
+            <p class="lede">
+              We read every message closely and reply within one or two days —
+              tell us what you're working on and where books might fit in.
+            </p>
+
+            <div class="contact-rows">
+              <div class="row-item">
+                <div class="ic">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.6"
+                  >
+                    <path
+                      d="M3 6l9 7 9-7M4 4h16a1 1 0 011 1v14a1 1 0 01-1 1H4a1 1 0 01-1-1V5a1 1 0 011-1z"
+                    />
+                  </svg>
+                </div>
+                <div class="txt">
+                  <span class="label">Email</span>
+                  <span class="val">lunabookstore@gmail.com</span>
+                </div>
+              </div>
+              <div class="row-item">
+                <div class="ic">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.6"
+                  >
+                    <path
+                      d="M12 21s7-6.1 7-11.5A7 7 0 105 9.5C5 14.9 12 21 12 21z"
+                    />
+                    <circle cx="12" cy="9.5" r="2.3" />
+                  </svg>
+                </div>
+                <div class="txt">
+                  <span class="label">Location</span>
+                  <span class="val">Siem Reap, Cambodia</span>
+                </div>
+              </div>
+              <div class="row-item">
+                <div class="ic">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.6"
+                  >
+                    <path
+                      d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012.1 4.2 2 2 0 014.1 2h3a2 2 0 012 1.7c.1.9.3 1.8.6 2.7a2 2 0 01-.4 2.1L8.1 9.7a16 16 0 006.2 6.2l1.2-1.2a2 2 0 012.1-.4c.9.3 1.8.5 2.7.6a2 2 0 011.7 2.1z"
+                    />
+                  </svg>
+                </div>
+                <div class="txt">
+                  <span class="label">Phone</span>
+                  <span class="val">+44 123 654 7890</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-5 contact-form-side">
+            <div class="card-label">
+              <span class="ttl">Contact Card</span>
+              <span class="no">No. 007</span>
+            </div>
+
+            <form>
+              <div class="row g-3">
+                <div class="col-sm-6 field">
+                  <label for="name">Name<span class="req">*</span></label>
+                  <input
+                    id="name"
+                    type="text"
+                    placeholder="Your name"
+                    required
+                  />
+                </div>
+                <div class="col-sm-6 field">
+                  <label for="email">Email<span class="req">*</span></label>
+                  <input
+                    id="email"
+                    type="email"
+                    placeholder="you@email.com"
+                    required
+                  />
+                </div>
+                <div class="col-12 field">
+                  <label for="website">Website</label>
+                  <input id="website" type="text" placeholder="yoursite.com" />
+                </div>
+                <div class="col-12 field">
+                  <label for="message">Message<span class="req">*</span></label>
+                  <textarea
+                    id="message"
+                    placeholder="Tell us about your project..."
+                    required
+                  ></textarea>
+                </div>
+              </div>
+
+              <button type="submit">
+                Submit
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M5 12h14M13 5l7 7-7 7" />
+                </svg>
+              </button>
+            </form>
+
+            <div class="stamp">books<br />&amp; ink</div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- footer -->
+    <section class="sf-wrap">
+      <!-- Why Choose Us -->
+      <div class="sf-why container-fluid">
+        <div class="sf-why-heading">
+          <h2>Why Choose Us?</h2>
+        </div>
+
+        <div class="row gy-4 sf-why-row">
+          <div class="col-md-3 col-6 sf-why-item">
+            <i class="bi bi-truck sf-why-icon"></i>
+            <div>
+              <div class="sf-why-title">Fast Delivery</div>
+              <div class="sf-why-text">Get your books delivered fast.</div>
+            </div>
+          </div>
+
+          <div class="col-md-3 col-6 sf-why-item">
+            <i class="bi bi-shield-check sf-why-icon"></i>
+            <div>
+              <div class="sf-why-title">Secure Payment</div>
+              <div class="sf-why-text">Secure and trusted payment methods.</div>
+            </div>
+          </div>
+
+          <div class="col-md-3 col-6 sf-why-item">
+            <i class="bi bi-headset sf-why-icon"></i>
+            <div>
+              <div class="sf-why-title">24/7 Support</div>
+              <div class="sf-why-text">We're here to help you anytime.</div>
+            </div>
+          </div>
+
+          <div class="col-md-3 col-6 sf-why-item">
+            <i class="bi bi-gift sf-why-icon"></i>
+            <div>
+              <div class="sf-why-title">Special Offers</div>
+              <div class="sf-why-text">Exclusive deals and discounts.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Newsletter -->
+      <div class="sf-newsletter container-fluid">
+        <div class="sf-newsletter-box">
+          <div class="sf-newsletter-left">
+            <i class="bi bi-envelope sf-newsletter-icon"></i>
+            <div>
+              <div class="sf-newsletter-title">Join Our Newsletter</div>
+              <div class="sf-newsletter-text">
+                Get the latest updates on new books and exclusive offers.
+              </div>
+            </div>
+          </div>
+          <form class="sf-newsletter-form" onsubmit="return false;">
+            <input
+              type="email"
+              class="sf-newsletter-input"
+              placeholder="Enter your email"
+              required
+            />
+            <button type="submit" class="sf-newsletter-btn">
+              <i class="bi bi-send"></i> Subscribe
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Footer columns -->
+      <div class="sf-footer container-fluid">
+        <div class="row gy-4">
+          <div class="col-lg-3 col-md-6">
+            <div class="sf-col-title">Book Store</div>
+            <p class="sf-about-text">
+              Your trusted online bookstore for discovering and buying your next
+              favorite books.
+            </p>
+            <div class="sf-socials">
+              <a href="#"><i class="bi bi-facebook"></i></a>
+              <a href="#"><i class="bi bi-instagram"></i></a>
+              <a href="#"><i class="bi bi-twitter"></i></a>
+              <a href="#"><i class="bi bi-youtube"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-md-6 col-6">
+            <div class="sf-col-title">Quick Links</div>
+            <ul class="sf-link-list">
+              <li><a href="home.html">Home</a></li>
+              <li><a href="book_details.html">Book Detailed</a></li>
+              <li><a href="shopping_cart.html">Shopping Cart</a></li>
+              <li><a href="categories.html">Categories</a></li>
+              <li><a href="contact_us.html">Contact Us</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-2 col-md-6 col-6">
+            <div class="sf-col-title">Categories</div>
+            <ul class="sf-link-list">
+              <li><a href="#">Fiction</a></li>
+              <li><a href="#">Education</a></li>
+              <li><a href="#">Biography</a></li>
+              <li><a href="#">Romance</a></li>
+              <li><a href="#">Best Sellers</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-2 col-md-6 col-6">
+            <div class="sf-col-title">Customer Service</div>
+            <ul class="sf-link-list">
+              <li><a href="#">FAQs</a></li>
+              <li><a href="#">Shipping &amp; Delivery</a></li>
+              <li><a href="#">Returns &amp; Refunds</a></li>
+              <li><a href="#">Terms &amp; Conditions</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 col-6">
+            <div class="sf-col-title">Contact Us</div>
+            <ul class="sf-contact-list">
+              <li><i class="bi bi-telephone"></i> +855 12 345 678</li>
+              <li><i class="bi bi-envelope"></i> info@bookstore.com</li>
+              <li>
+                <i class="bi bi-geo-alt"></i> 123 Book Street, Phnom Penh,
+                Cambodia
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="sf-bottom">&copy; 2026 Book Store. All Rights Reserved.</div>
+    </section>
   </body>
 </html>

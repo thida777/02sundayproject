@@ -404,7 +404,9 @@
       <!-- NEW: Khmer book spotlight carousel (namespaced) -->
       <!-- ============================================= -->
       <div class="section-heading-wrap mb-4 mt-5">
-        <span class="section-heading">Featured Books</span>
+        <a href="bookdetail.html" class="section-heading text-decoration-none">
+          Book Details
+        </a>
       </div>
 
       <div class="bkspot-rail">
@@ -456,64 +458,6 @@
     </div>
     <!-- card -->
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
-    <script>
-      // Update button label to show the selected option (Bootstrap handles open/close on its own)
-      document.querySelectorAll(".dropdown").forEach(function (dropdown) {
-        var label = dropdown.querySelector(".fb-value");
-        dropdown.querySelectorAll(".dropdown-item").forEach(function (item) {
-          item.addEventListener("click", function (e) {
-            e.preventDefault();
-            if (label) label.textContent = item.textContent;
-          });
-        });
-      });
-    </script>
-
-    <!-- spotlight carousel auto-advance logic -->
-    <script>
-      (function () {
-        const track = document.getElementById("bkspot-track");
-        if (!track) return;
-
-        const scroller = track.parentElement;
-        const originalCards = Array.from(track.children);
-        const cardCount = originalCards.length;
-        originalCards.forEach((card) =>
-          track.appendChild(card.cloneNode(true)),
-        );
-
-        const GAP = 20;
-        let index = 0;
-        let timer = null;
-
-        function step() {
-          index++;
-          const distance = track.children[0].offsetWidth + GAP;
-          track.style.transition = "transform 0.8s ease";
-          track.style.transform = `translateX(${-index * distance}px)`;
-
-          if (index === cardCount) {
-            setTimeout(() => {
-              track.style.transition = "none";
-              track.style.transform = "translateX(0px)";
-              index = 0;
-            }, 820);
-          }
-        }
-
-        function start() {
-          timer = setInterval(step, 8000);
-        }
-        function stop() {
-          clearInterval(timer);
-        }
-
-        window.addEventListener("load", start);
-        scroller.addEventListener("mouseenter", stop);
-        scroller.addEventListener("mouseleave", start);
-      })();
-    </script>
     <section class="sf-wrap">
       <!-- Why Choose Us -->
       <div class="sf-why container-fluid">
@@ -646,7 +590,63 @@
         </div>
       </div>
 
-      <div class="sf-bottom">&copy; 2024 Book Store. All Rights Reserved.</div>
+      <div class="sf-bottom">&copy; 2026 Book Store. All Rights Reserved.</div>
     </section>
   </body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Update button label to show the selected option (Bootstrap handles open/close on its own)
+    document.querySelectorAll(".dropdown").forEach(function (dropdown) {
+      var label = dropdown.querySelector(".fb-value");
+      dropdown.querySelectorAll(".dropdown-item").forEach(function (item) {
+        item.addEventListener("click", function (e) {
+          e.preventDefault();
+          if (label) label.textContent = item.textContent;
+        });
+      });
+    });
+  </script>
+
+  <!-- spotlight carousel auto-advance logic -->
+  <script>
+    (function () {
+      const track = document.getElementById("bkspot-track");
+      if (!track) return;
+
+      const scroller = track.parentElement;
+      const originalCards = Array.from(track.children);
+      const cardCount = originalCards.length;
+      originalCards.forEach((card) => track.appendChild(card.cloneNode(true)));
+
+      const GAP = 20;
+      let index = 0;
+      let timer = null;
+
+      function step() {
+        index++;
+        const distance = track.children[0].offsetWidth + GAP;
+        track.style.transition = "transform 0.8s ease";
+        track.style.transform = `translateX(${-index * distance}px)`;
+
+        if (index === cardCount) {
+          setTimeout(() => {
+            track.style.transition = "none";
+            track.style.transform = "translateX(0px)";
+            index = 0;
+          }, 820);
+        }
+      }
+
+      function start() {
+        timer = setInterval(step, 8000);
+      }
+      function stop() {
+        clearInterval(timer);
+      }
+
+      window.addEventListener("load", start);
+      scroller.addEventListener("mouseenter", stop);
+      scroller.addEventListener("mouseleave", start);
+    })();
+  </script>
 </html>
