@@ -1,0 +1,351 @@
+/* ========================================
+   SHOPPING CART + CHECKOUT
+   (shopping_cart.html, checkout.html)
+   Dark theme, matches css/styles.css
+======================================== */
+
+.cart-page {
+  padding-bottom: 3rem;
+}
+
+/* ---------- cart item ---------- */
+.cart-item {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  padding: 1rem 1.25rem;
+  margin-bottom: 0.9rem;
+  background: var(--bg-soft);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+}
+
+.cart-book-image {
+  width: 72px;
+  height: 108px;
+  object-fit: cover;
+  border-radius: 4px;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.4);
+}
+
+.cart-book-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.cart-book-title {
+  display: block;
+  font-family: "Fraunces", serif;
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: var(--cream);
+  text-decoration: none;
+  margin-bottom: 0.15rem;
+}
+
+.cart-book-title:hover {
+  color: var(--copper);
+}
+
+.cart-book-info p {
+  margin: 0 0 0.25rem;
+  font-size: 0.88rem;
+  color: rgba(244, 234, 216, 0.65);
+}
+
+.cart-book-info strong {
+  color: var(--cream);
+}
+
+.quantity-control {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.quantity-control button {
+  width: 34px;
+  height: 34px;
+  border: none;
+  border-radius: 6px;
+  background: var(--copper);
+  color: var(--bg);
+  font-size: 1.15rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.quantity-control button:hover {
+  background: var(--copper-dark);
+}
+
+.quantity-control span {
+  min-width: 26px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.cart-subtotal {
+  width: 84px;
+  text-align: right;
+  font-weight: 700;
+  color: var(--cream);
+}
+
+.remove-btn {
+  border: none;
+  background: transparent;
+  color: #e07a6c;
+  font-size: 1.2rem;
+  padding: 0.25rem 0.4rem;
+}
+
+.remove-btn:hover {
+  color: #ff9a8b;
+}
+
+/* ---------- summary card ---------- */
+.cart-summary,
+.checkout-card {
+  background: var(--bg-soft);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 1.5rem;
+}
+
+.cart-summary h2,
+.checkout-card h2 {
+  font-family: "Fraunces", serif;
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.4rem 0;
+  color: rgba(244, 234, 216, 0.85);
+}
+
+.summary-row.total {
+  border-top: 1px solid var(--line);
+  margin-top: 0.5rem;
+  padding-top: 0.9rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--cream);
+}
+
+.shipping-hint {
+  font-size: 0.82rem;
+  color: var(--copper);
+  margin: 0.5rem 0 1.1rem;
+}
+
+.clear-cart-btn {
+  background: none;
+  border: none;
+  color: #e07a6c;
+  font-size: 0.88rem;
+  margin-top: 0.9rem;
+  width: 100%;
+  text-decoration: underline;
+}
+
+/* ---------- checkout form ---------- */
+.checkout-card .form-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--cream);
+}
+
+.checkout-card .form-control,
+.checkout-card .form-select {
+  background-color: var(--cream);
+  color: #3a2415;
+  border: 1.5px solid transparent;
+}
+
+.checkout-card .form-control:focus {
+  border-color: var(--copper);
+  box-shadow: 0 0 0 0.2rem rgba(201, 137, 90, 0.3);
+}
+
+.checkout-card .invalid-feedback {
+  color: #ff9a8b;
+}
+
+.pay-option {
+  display: flex;
+  gap: 0.75rem;
+  align-items: flex-start;
+  padding: 0.85rem 1rem;
+  border: 1.5px solid var(--line);
+  border-radius: 8px;
+  margin-bottom: 0.6rem;
+  cursor: pointer;
+}
+
+.pay-option:has(input:checked) {
+  border-color: var(--copper);
+  background: rgba(201, 137, 90, 0.12);
+}
+
+.pay-option small {
+  display: block;
+  color: rgba(244, 234, 216, 0.65);
+}
+
+.pay-option .form-check-input {
+  margin-top: 0.3rem;
+}
+
+.checkout-items {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1rem;
+}
+
+.checkout-line {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.6rem 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.checkout-line img {
+  width: 40px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 3px;
+}
+
+.checkout-line-info {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.checkout-line-info small {
+  color: rgba(244, 234, 216, 0.6);
+}
+
+/* ---------- order confirmation ---------- */
+.done-card {
+  max-width: 620px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.done-card > i {
+  font-size: 3.5rem;
+  color: #6cc17b;
+}
+
+.done-id {
+  display: inline-block;
+  font-family: "Fraunces", serif;
+  font-size: 1.4rem;
+  letter-spacing: 0.06em;
+  color: var(--copper);
+  border: 1.5px dashed var(--copper);
+  border-radius: 8px;
+  padding: 0.3rem 1rem;
+  margin: 0.5rem 0 1.5rem;
+}
+
+.done-details {
+  text-align: left;
+  background: var(--bg-soft);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.done-details dl {
+  display: grid;
+  grid-template-columns: 110px 1fr;
+  gap: 0.4rem 1rem;
+  margin: 0 0 1rem;
+}
+
+.done-details dt {
+  color: rgba(244, 234, 216, 0.6);
+  font-weight: 500;
+}
+
+.done-details dd {
+  margin: 0;
+}
+
+.done-details ul {
+  list-style: none;
+  padding: 0.75rem 0 0;
+  margin: 0;
+  border-top: 1px solid var(--line);
+}
+
+.done-details li {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.2rem 0;
+}
+
+.done-details .done-total {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid var(--line);
+  margin-top: 0.5rem;
+  padding-top: 0.6rem;
+  font-weight: 700;
+}
+
+/* ---------- small screens ---------- */
+@media (max-width: 768px) {
+  .cart-item {
+    flex-wrap: wrap;
+  }
+
+  .cart-book-info {
+    flex: 1 1 calc(100% - 100px);
+  }
+
+  .quantity-control {
+    margin-left: 88px;
+  }
+
+  .cart-subtotal {
+    margin-left: auto;
+  }
+
+  /* trash icon sits in the top-right corner of the card */
+  .cart-item {
+    position: relative;
+  }
+
+  .cart-item .remove-btn {
+    position: absolute;
+    top: 6px;
+    right: 8px;
+  }
+
+  .cart-book-info {
+    padding-right: 24px;
+  }
+}
+
+/* ---------- form polish ---------- */
+.checkout-card .form-control::placeholder {
+  color: rgba(58, 36, 21, 0.45);
+}
+
+/* optional fields don't need a green "valid" tick */
+.was-validated .checkout-card .form-control:not([required]):valid {
+  border-color: transparent;
+  background-image: none;
+  padding-right: 0.75rem;
+}

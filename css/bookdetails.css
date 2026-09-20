@@ -1,0 +1,170 @@
+/* ========================================
+   BOOK DETAIL PAGE  (bookdetail.html)
+   Uses the colour variables from styles.css
+======================================== */
+
+.detail-page {
+  padding-top: 2.5rem;
+  padding-bottom: 2rem;
+}
+
+.detail-cover {
+  width: 100%;
+  max-width: 320px;
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
+  border-radius: 6px;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.5);
+}
+
+.detail-crumbs {
+  font-size: 0.85rem;
+  color: rgba(244, 234, 216, 0.6);
+  margin-bottom: 0.75rem;
+}
+
+.detail-crumbs a {
+  text-decoration: none;
+}
+
+.detail-crumbs i {
+  font-size: 0.7rem;
+  margin: 0 0.25rem;
+}
+
+.detail-title {
+  font-family: "Fraunces", serif;
+  font-weight: 600;
+  font-size: clamp(1.7rem, 4vw, 2.5rem);
+  color: var(--cream);
+  margin-bottom: 0.25rem;
+}
+
+.detail-author {
+  font-size: 1.05rem;
+  color: rgba(244, 234, 216, 0.7);
+  margin-bottom: 1rem;
+}
+
+.detail-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.detail-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  border: 1.5px solid var(--copper);
+  color: var(--copper);
+  border-radius: 20px;
+  padding: 0.2rem 0.8rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+a.detail-tag:hover {
+  background: var(--copper);
+  color: var(--bg);
+}
+
+.detail-tag.is-gold {
+  border-color: #e8c873;
+  color: #e8c873;
+}
+
+a.detail-tag.is-gold:hover {
+  background: #e8c873;
+  color: var(--bg);
+}
+
+.detail-tag.is-plain {
+  border-color: var(--line);
+  color: rgba(244, 234, 216, 0.75);
+}
+
+.detail-price {
+  font-family: "Fraunces", serif;
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--cream);
+  margin-bottom: 1rem;
+}
+
+.detail-price small {
+  font-family: "Inter", sans-serif;
+  font-size: 0.95rem;
+  font-weight: 400;
+  color: rgba(244, 234, 216, 0.6);
+  margin-left: 0.4rem;
+}
+
+.detail-description {
+  color: rgba(244, 234, 216, 0.88);
+  line-height: 1.75;
+  max-width: 62ch;
+  margin-bottom: 1.75rem;
+}
+
+.detail-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.qty-stepper {
+  display: inline-flex;
+  align-items: stretch;
+  border: 1.5px solid var(--line);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.qty-stepper button {
+  width: 42px;
+  border: none;
+  background: var(--bg-soft);
+  color: var(--cream);
+  font-size: 1.2rem;
+}
+
+.qty-stepper button:hover {
+  background: var(--copper);
+  color: var(--bg);
+}
+
+.qty-stepper input {
+  width: 56px;
+  text-align: center;
+  border: none;
+  background: var(--cream);
+  color: #3a2415;
+  font-weight: 600;
+  -moz-appearance: textfield;
+}
+
+.qty-stepper input::-webkit-outer-spin-button,
+.qty-stepper input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.detail-back {
+  text-decoration: none;
+  font-size: 0.92rem;
+}
+
+#related-section {
+  padding-bottom: 3rem;
+}
+
+@media (max-width: 767px) {
+  .detail-page .text-center {
+    margin-bottom: 1.5rem;
+  }
+}

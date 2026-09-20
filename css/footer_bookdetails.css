@@ -1,0 +1,134 @@
+:root {
+  --brown-dark: #3a2418;
+  --brown-darker: #2b1a10;
+  --brown-panel: #4a2d1c;
+  --gold: #cc9b52;
+  --footer-text-muted: #cbb79a;
+}
+
+footer {
+  background: var(--brown-dark);
+  color: var(--footer-text-muted);
+  padding-top: 30px;
+  margin-top: 50px;
+}
+
+.newsletter-box {
+  background: var(--brown-panel);
+  border-radius: 10px;
+  padding: 28px 30px;
+  margin: 0 15px 40px;
+}
+
+.newsletter-icon {
+  font-size: 1.8rem;
+  color: var(--gold);
+}
+
+.newsletter-box h4 {
+  color: #fff;
+  font-family: Georgia, "Times New Roman", serif;
+  margin-bottom: 4px;
+}
+
+.newsletter-box p {
+  color: var(--footer-text-muted);
+  margin-bottom: 0;
+  font-size: 0.9rem;
+}
+
+.newsletter-box .form-control {
+  background: var(--brown-dark);
+  border: 1px solid #6b4a34;
+  color: #fff;
+  padding: 10px 16px;
+}
+
+.newsletter-box .form-control::placeholder {
+  color: #b39a80;
+}
+
+.newsletter-box .form-control:focus {
+  background: var(--brown-dark);
+  color: #fff;
+  box-shadow: none;
+  border-color: var(--gold);
+}
+
+.btn-subscribe {
+  background: var(--gold);
+  border: none;
+  color: #2b1a10;
+  font-weight: 600;
+  padding: 10px 22px;
+  white-space: nowrap;
+}
+
+.btn-subscribe:hover {
+  background: #b8863f;
+  color: #fff;
+}
+
+footer h5,
+footer h6 {
+  color: var(--gold);
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 600;
+  margin-bottom: 18px;
+}
+
+footer a {
+  color: var(--footer-text-muted);
+  text-decoration: none;
+  display: block;
+  margin-bottom: 10px;
+  font-size: 0.92rem;
+}
+
+footer a:hover {
+  color: var(--gold);
+}
+
+footer p.small-text {
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 12px;
+  font-size: 0.92rem;
+}
+
+.contact-item i {
+  color: var(--gold);
+  margin-top: 3px;
+}
+
+.social-icons a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--brown-panel);
+  color: var(--footer-text-muted);
+  margin-right: 10px;
+  margin-bottom: 0;
+}
+
+.social-icons a:hover {
+  background: var(--gold);
+  color: var(--brown-darker);
+}
+
+.footer-bottom {
+  border-top: 1px solid #5a3d29;
+  text-align: center;
+  padding: 18px 15px;
+  font-size: 0.85rem;
+  margin-top: 20px;
+}
