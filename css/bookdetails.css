@@ -1,168 +1,170 @@
-:root {
-  --bg: #7a4a2b;
-  --bg-dark: #2b1d14;
-  --card-bg: #ffffff;
-  --star: #f2b705;
-  --star-empty: #d8d8d8;
-  --text-light: #f5efe6;
-  --text-muted: #d8c3a5;
-  --author: #b8895a;
+/* ========================================
+   BOOK DETAIL PAGE  (bookdetail.html)
+   Uses the colour variables from styles.css
+======================================== */
+
+.detail-page {
+  padding-top: 2.5rem;
+  padding-bottom: 2rem;
 }
 
-* {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-  font-family: "Segoe UI", Arial, sans-serif;
-  background: var(--bg);
-  padding: 40px 20px 0;
-}
-
-h1.page-title {
-  text-align: center;
-  color: var(--text-light);
-  font-weight: 600;
-  font-size: 1.6rem;
-  margin: 0 0 8px;
-}
-
-.title-underline {
-  width: 60px;
-  height: 2px;
-  background: var(--text-muted);
-  margin: 0 auto 36px;
-}
-
-.grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(160px, 1fr));
-  gap: 28px 24px;
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-.card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-
-.cover {
+.detail-cover {
   width: 100%;
+  max-width: 320px;
   aspect-ratio: 2 / 3;
-  border-radius: 4px;
-  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.35);
-  margin-bottom: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #fff;
-  font-weight: 700;
-  font-size: 1rem;
-  padding: 12px;
-  line-height: 1.3;
-}
-
-.book-title {
-  color: var(--text-light);
-  font-weight: 600;
-  font-size: 0.95rem;
-  margin: 2px 0 2px;
-}
-
-.book-author {
-  color: var(--author);
-  font-size: 0.8rem;
-  margin: 0 0 6px;
-}
-
-.stars {
-  font-size: 0.9rem;
-  letter-spacing: 2px;
-  margin-bottom: 6px;
-}
-
-.stars .filled {
-  color: var(--star);
-}
-.stars .empty {
-  color: var(--star-empty);
-}
-
-.price {
-  color: var(--text-light);
-  font-weight: 700;
-  font-size: 0.95rem;
-}
-
-footer {
-  margin-top: 50px;
-  background: var(--bg-dark);
-  padding: 24px 20px;
-  text-align: center;
-  color: var(--text-light);
-}
-
-@media (max-width: 600px) {
-  .grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-body {
-  background-color: #8a5a3c;
-  color: #fff;
-  font-family: "Segoe UI", Arial, sans-serif;
-  padding: 40px 0;
-}
-
-.page-title {
-  text-align: center;
-  font-weight: 700;
-  margin-bottom: 40px;
-  letter-spacing: 0.5px;
-}
-
-.book-card {
-  text-align: center;
-  margin-bottom: 40px;
-}
-
-.book-cover {
-  width: 100%;
-  max-width: 170px;
-  height: 240px;
   object-fit: cover;
-  border-radius: 4px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-  margin-bottom: 12px;
+  border-radius: 6px;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.5);
 }
 
-.book-title {
-  font-weight: 700;
-  font-size: 1rem;
-  margin-bottom: 2px;
-}
-
-.book-author {
+.detail-crumbs {
   font-size: 0.85rem;
-  color: #f0e4da;
-  margin-bottom: 6px;
+  color: rgba(244, 234, 216, 0.6);
+  margin-bottom: 0.75rem;
 }
 
-.book-stars {
-  color: #ffd23f;
-  font-size: 0.9rem;
-  margin-bottom: 6px;
+.detail-crumbs a {
+  text-decoration: none;
 }
 
-.book-stars .empty {
-  color: rgba(255, 255, 255, 0.35);
+.detail-crumbs i {
+  font-size: 0.7rem;
+  margin: 0 0.25rem;
 }
 
-.book-price {
-  font-weight: 700;
-  font-size: 1rem;
+.detail-title {
+  font-family: "Fraunces", serif;
+  font-weight: 600;
+  font-size: clamp(1.7rem, 4vw, 2.5rem);
+  color: var(--cream);
+  margin-bottom: 0.25rem;
+}
+
+.detail-author {
+  font-size: 1.05rem;
+  color: rgba(244, 234, 216, 0.7);
+  margin-bottom: 1rem;
+}
+
+.detail-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.detail-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  border: 1.5px solid var(--copper);
+  color: var(--copper);
+  border-radius: 20px;
+  padding: 0.2rem 0.8rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+a.detail-tag:hover {
+  background: var(--copper);
+  color: var(--bg);
+}
+
+.detail-tag.is-gold {
+  border-color: #e8c873;
+  color: #e8c873;
+}
+
+a.detail-tag.is-gold:hover {
+  background: #e8c873;
+  color: var(--bg);
+}
+
+.detail-tag.is-plain {
+  border-color: var(--line);
+  color: rgba(244, 234, 216, 0.75);
+}
+
+.detail-price {
+  font-family: "Fraunces", serif;
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--cream);
+  margin-bottom: 1rem;
+}
+
+.detail-price small {
+  font-family: "Inter", sans-serif;
+  font-size: 0.95rem;
+  font-weight: 400;
+  color: rgba(244, 234, 216, 0.6);
+  margin-left: 0.4rem;
+}
+
+.detail-description {
+  color: rgba(244, 234, 216, 0.88);
+  line-height: 1.75;
+  max-width: 62ch;
+  margin-bottom: 1.75rem;
+}
+
+.detail-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.qty-stepper {
+  display: inline-flex;
+  align-items: stretch;
+  border: 1.5px solid var(--line);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.qty-stepper button {
+  width: 42px;
+  border: none;
+  background: var(--bg-soft);
+  color: var(--cream);
+  font-size: 1.2rem;
+}
+
+.qty-stepper button:hover {
+  background: var(--copper);
+  color: var(--bg);
+}
+
+.qty-stepper input {
+  width: 56px;
+  text-align: center;
+  border: none;
+  background: var(--cream);
+  color: #3a2415;
+  font-weight: 600;
+  -moz-appearance: textfield;
+}
+
+.qty-stepper input::-webkit-outer-spin-button,
+.qty-stepper input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.detail-back {
+  text-decoration: none;
+  font-size: 0.92rem;
+}
+
+#related-section {
+  padding-bottom: 3rem;
+}
+
+@media (max-width: 767px) {
+  .detail-page .text-center {
+    margin-bottom: 1.5rem;
+  }
 }

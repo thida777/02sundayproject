@@ -306,3 +306,43 @@
     transition: none !important;
   }
 }
+
+/* ---- Form validation + status messages ---- */
+.contact-page .field .err {
+  min-height: 0;
+  margin-top: 4px;
+  font-size: 12px;
+  color: var(--error);
+}
+
+.contact-page .field.invalid input,
+.contact-page .field.invalid textarea {
+  border-color: var(--error);
+}
+
+.contact-page .form-status {
+  margin-top: 16px;
+  font-size: 14px;
+  line-height: 1.5;
+  border-radius: 8px;
+  padding: 0;
+}
+
+.contact-page .form-status.success,
+.contact-page .form-status.error {
+  padding: 10px 14px;
+}
+
+.contact-page .form-status.success {
+  background: rgba(60, 140, 80, 0.14);
+  color: #2b6a3c;
+}
+
+.contact-page .form-status.error {
+  background: rgba(190, 80, 60, 0.12);
+  color: #a5432f;
+}
+
+.contact-page .form-status {
+  margin-right: 84px; /* keep clear of the round stamp */
+}

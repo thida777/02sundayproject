@@ -3,33 +3,34 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Book Details</title>
-    <link rel="stylesheet" href="css/footer_bookdetails.css" />
-    <link rel="stylesheet" href="css/bookdetails.css" />
+    <title>Book Details — Book Store</title>
+    <meta name="description" content="Book details." />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%93%9A%3C/text%3E%3C/svg%3E" />
     <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
-    />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        const currentPage = window.location.pathname.split("/").pop();
-        document.querySelectorAll(".nav-link").forEach((link) => {
-          if (link.getAttribute("href") === currentPage) {
-            link.classList.add("active");
-          }
-        });
-      });
-    </script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600;700&family=Noto+Serif+Khmer:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/footer_section.css" />
+    <link rel="stylesheet" href="css/bookdetails.css" />
   </head>
   <body>
     <nav class="navbar navbar-expand-lg custom-navbar">
       <div class="container-fluid">
+        <a class="navbar-brand" href="home.html">
+          <img src="images/booklogo.png" alt="" class="brand-logo" />
+          Book Store
+        </a>
         <button
           class="navbar-toggler"
           type="button"
@@ -42,19 +43,19 @@
           <span class="navbar-toggler-icon"></span>
         </button>
 
-        <div
-          class="collapse navbar-collapse justify-content-center"
-          id="navbarNav"
-        >
-          <ul class="navbar-nav">
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav mx-auto">
             <li class="nav-item">
               <a class="nav-link" href="home.html">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="shopping_cart.html">Shopping Cart</a>
+              <a class="nav-link" href="categories.html">Categories</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="categories.html">Categories</a>
+              <a class="nav-link" href="shopping_cart.html">
+                Shopping Cart
+                <span id="cart-count" class="badge bg-danger">0</span>
+              </a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="contact_us.html">Contact Us</a>
@@ -63,261 +64,101 @@
         </div>
       </div>
     </nav>
-    <!-- Book Details body -->
-    <div class="container py-5">
-      <!-- Page Header -->
-      <div class="text-center mb-5">
-        <h1 class="page-title">Book Collection</h1>
-        <p class="text-muted">Discover your next favorite book</p>
+
+    <main class="container detail-page">
+      <div id="book-detail" class="row g-4 align-items-start"></div>
+    </main>
+
+    <section class="container" id="related-section" hidden>
+      <div class="section-heading-wrap mb-4 mt-4">
+        <span class="section-heading">You May Also Like</span>
       </div>
-      <div class="row g-4">
-        <!-- Book 1 -->
-        <div class="col-6 col-md-4 col-lg-3">
-          <div class="book-card">
-            <div class="book-image">
-              <img
-                src="images/a million to one.png"
-                alt="A Million to One"
-                class="book-cover"
-              />
-            </div>
+      <div class="row g-4 justify-content-center" id="related-books"></div>
+    </section>
 
-            <div class="book-info">
-              <h5 class="book-title">A Million to One</h5>
-              <p class="book-author">By Tony Faggioli</p>
-
-              <div class="book-rating">
-                <span>★★★★</span><span class="empty">★</span>
-              </div>
-
-              <div class="book-bottom">
-                <span class="book-price">$18.00</span>
-              </div>
-            </div>
-          </div>
+    <!-- footer -->
+    <section class="sf-wrap">
+      <!-- Why Choose Us -->
+      <div class="sf-why container-fluid">
+        <div class="sf-why-heading">
+          <h2>Why Choose Us?</h2>
         </div>
 
-        <!-- Book 2 -->
-        <div class="col-6 col-md-4 col-lg-3">
-          <div class="book-card">
-            <div class="book-image">
-              <img
-                src="images/educated.png"
-                alt="Educated"
-                class="book-cover"
-              />
-            </div>
-
-            <div class="book-info">
-              <h5 class="book-title">Educated: A Memoir</h5>
-              <p class="book-author">By Tara Westover</p>
-
-              <div class="book-rating">
-                <span>★★★★</span><span class="empty">★</span>
-              </div>
-
-              <div class="book-bottom">
-                <span class="book-price">$12.50</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Book 3 -->
-        <div class="col-6 col-md-4 col-lg-3">
-          <div class="book-card">
-            <div class="book-image">
-              <img
-                src="images/ocean door.png"
-                alt="Beyond the Ocean Door"
-                class="book-cover"
-              />
-            </div>
-
-            <div class="book-info">
-              <h5 class="book-title">Beyond The Ocean Door</h5>
-              <p class="book-author">By Taylor Trever</p>
-
-              <div class="book-rating">
-                <span>★★★</span><span class="empty">★★</span>
-              </div>
-
-              <div class="book-bottom">
-                <span class="book-price">$21.50</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Book 4 -->
-        <div class="col-6 col-md-4 col-lg-3">
-          <div class="book-card">
-            <div class="book-image">
-              <img
-                src="images/voice of the wind.png"
-                alt="Voices of the Winds"
-                class="book-cover"
-              />
-            </div>
-
-            <div class="book-info">
-              <h5 class="book-title">Voices of the Winds</h5>
-              <p class="book-author">By Tony Faggioli</p>
-
-              <div class="book-rating">
-                <span>★★★</span><span class="empty">★★</span>
-              </div>
-
-              <div class="book-bottom">
-                <span class="book-price">$18.00</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Book 5 -->
-        <div class="col-6 col-md-4 col-lg-3">
-          <div class="book-card">
-            <div class="book-image">
-              <img
-                src="images/the secret.png"
-                alt="The Secret of Honeycake"
-                class="book-cover"
-              />
-            </div>
-
-            <div class="book-info">
-              <h5 class="book-title">The Secret of Honeycake</h5>
-              <p class="book-author">By Taylor Trever</p>
-
-              <div class="book-rating">
-                <span>★★★</span><span class="empty">★★</span>
-              </div>
-
-              <div class="book-bottom">
-                <span class="book-price">$18.00</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Book 6 -->
-        <div class="col-6 col-md-4 col-lg-3">
-          <div class="book-card">
-            <div class="book-image">
-              <img
-                src="images/science.png"
-                alt="The Science"
-                class="book-cover"
-              />
-            </div>
-
-            <div class="book-info">
-              <h5 class="book-title">The Science</h5>
-              <p class="book-author">By Albert-László Barabási</p>
-
-              <div class="book-rating">
-                <span>★★★★★</span>
-              </div>
-
-              <div class="book-bottom">
-                <span class="book-price">$21.50</span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- Book 7 -->
-        <div class="col-6 col-md-4 col-lg-3">
-          <div class="book-card">
-            <div class="book-image">
-              <img
-                src="images/the secret.png"
-                alt="The Secret of Honeycake"
-                class="book-cover"
-              />
-            </div>
-
-            <div class="book-info">
-              <h5 class="book-title">The Secret of Honeycake</h5>
-              <p class="book-author">By Taylor Trever</p>
-
-              <div class="book-rating">
-                <span>★★★</span><span class="empty">★★</span>
-              </div>
-
-              <div class="book-bottom">
-                <span class="book-price">$18.00</span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- Book 8 -->
-        <div class="col-6 col-md-4 col-lg-3">
-          <div class="book-card">
-            <div class="book-image">
-              <img
-                src="images/ocean door.png"
-                alt="Beyond the Ocean Door"
-                class="book-cover"
-              />
-            </div>
-
-            <div class="book-info">
-              <h5 class="book-title">Beyond The Ocean Door</h5>
-              <p class="book-author">By Taylor Trever</p>
-
-              <div class="book-rating">
-                <span>★★★</span><span class="empty">★★</span>
-              </div>
-
-              <div class="book-bottom">
-                <span class="book-price">$21.50</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- ===== Footer ===== -->
-    <footer>
-      <div class="container">
-        <!-- Newsletter -->
-        <div
-          class="newsletter-box d-flex flex-wrap align-items-center justify-content-between gap-3"
-        >
-          <div class="d-flex align-items-center gap-3">
-            <i class="bi bi-envelope newsletter-icon"></i>
+        <div class="row gy-4 sf-why-row">
+          <div class="col-md-3 col-6 sf-why-item">
+            <i class="bi bi-truck sf-why-icon"></i>
             <div>
-              <h4>Join Our Newsletter</h4>
-              <p>Get the latest updates on new books and exclusive offers.</p>
+              <div class="sf-why-title">Fast Delivery</div>
+              <div class="sf-why-text">Get your books delivered fast.</div>
             </div>
           </div>
-          <form
-            class="d-flex gap-2 flex-wrap flex-grow-1 justify-content-end"
-            style="max-width: 520px"
-          >
+
+          <div class="col-md-3 col-6 sf-why-item">
+            <i class="bi bi-shield-check sf-why-icon"></i>
+            <div>
+              <div class="sf-why-title">Secure Payment</div>
+              <div class="sf-why-text">Secure and trusted payment methods.</div>
+            </div>
+          </div>
+
+          <div class="col-md-3 col-6 sf-why-item">
+            <i class="bi bi-headset sf-why-icon"></i>
+            <div>
+              <div class="sf-why-title">24/7 Support</div>
+              <div class="sf-why-text">We're here to help you anytime.</div>
+            </div>
+          </div>
+
+          <div class="col-md-3 col-6 sf-why-item">
+            <i class="bi bi-gift sf-why-icon"></i>
+            <div>
+              <div class="sf-why-title">Special Offers</div>
+              <div class="sf-why-text">Exclusive deals and discounts.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Newsletter -->
+      <div class="sf-newsletter container-fluid">
+        <div class="sf-newsletter-box">
+          <div class="sf-newsletter-left">
+            <i class="bi bi-envelope sf-newsletter-icon"></i>
+            <div>
+              <div class="sf-newsletter-title">Join Our Newsletter</div>
+              <div class="sf-newsletter-text">
+                Get the latest updates on new books and exclusive offers.
+              </div>
+            </div>
+          </div>
+          <form class="sf-newsletter-form">
             <input
               type="email"
-              class="form-control"
+              class="sf-newsletter-input"
               placeholder="Enter your email"
-              style="min-width: 220px; flex: 1"
+              aria-label="Email address"
+              aria-label="Email address"
+              aria-label="Email address"
+              aria-label="Email address"
+              required
             />
-            <button type="submit" class="btn btn-subscribe">
+            <button type="submit" class="sf-newsletter-btn">
               <i class="bi bi-send"></i> Subscribe
             </button>
           </form>
         </div>
+      </div>
 
-        <!-- Columns -->
-        <div class="row px-3">
-          <div class="col-6 col-md-4 col-lg mb-4">
-            <h5>Book Store</h5>
-            <p class="small-text">
+      <!-- Footer columns -->
+      <div class="sf-footer container-fluid">
+        <div class="row gy-4">
+          <div class="col-lg-3 col-md-6">
+            <div class="sf-col-title">Book Store</div>
+            <p class="sf-about-text">
               Your trusted online bookstore for discovering and buying your next
               favorite books.
             </p>
-            <div class="social-icons mt-3">
+            <div class="sf-socials">
               <a href="#"><i class="bi bi-facebook"></i></a>
               <a href="#"><i class="bi bi-instagram"></i></a>
               <a href="#"><i class="bi bi-twitter"></i></a>
@@ -325,52 +166,59 @@
             </div>
           </div>
 
-          <div class="col-6 col-md-4 col-lg mb-4">
-            <h6>Quick Links</h6>
-            <a href="#">Home</a>
-            <a href="#">Book Detailed</a>
-            <a href="#">Shopping Cart</a>
-            <a href="#">Categories</a>
-            <a href="#">Contact Us</a>
+          <div class="col-lg-2 col-md-6 col-6">
+            <div class="sf-col-title">Quick Links</div>
+            <ul class="sf-link-list">
+              <li><a href="home.html">Home</a></li>
+              <li><a href="shopping_cart.html">Shopping Cart</a></li>
+              <li><a href="categories.html">Categories</a></li>
+              <li><a href="contact_us.html">Contact Us</a></li>
+              <li><a href="help.html">Help Center</a></li>
+            </ul>
           </div>
 
-          <div class="col-6 col-md-4 col-lg mb-4">
-            <h6>Categories</h6>
-            <a href="#">Fiction</a>
-            <a href="#">Education</a>
-            <a href="#">Biography</a>
-            <a href="#">Romance</a>
-            <a href="#">Best Sellers</a>
+          <div class="col-lg-2 col-md-6 col-6">
+            <div class="sf-col-title">Categories</div>
+            <ul class="sf-link-list">
+              <li><a href="categories.html?category=fiction">Fiction</a></li>
+              <li><a href="categories.html?category=education">Education</a></li>
+              <li><a href="categories.html?category=biography">Biography</a></li>
+              <li><a href="categories.html?category=romance">Romance</a></li>
+              <li><a href="categories.html?category=bestselling">Best Sellers</a></li>
+            </ul>
           </div>
 
-          <div class="col-6 col-md-4 col-lg mb-4">
-            <h6>Customer Service</h6>
-            <a href="#">FAQs</a>
-            <a href="#">Shipping &amp; Delivery</a>
-            <a href="#">Returns &amp; Refunds</a>
-            <a href="#">Terms &amp; Conditions</a>
-            <a href="#">Privacy Policy</a>
+          <div class="col-lg-2 col-md-6 col-6">
+            <div class="sf-col-title">Customer Service</div>
+            <ul class="sf-link-list">
+              <li><a href="help.html#faqs">FAQs</a></li>
+              <li><a href="help.html#shipping">Shipping &amp; Delivery</a></li>
+              <li><a href="help.html#returns">Returns &amp; Refunds</a></li>
+              <li><a href="help.html#terms">Terms &amp; Conditions</a></li>
+              <li><a href="help.html#privacy">Privacy Policy</a></li>
+            </ul>
           </div>
 
-          <div class="col-6 col-md-4 col-lg mb-4">
-            <h6>Contact Us</h6>
-            <div class="contact-item">
-              <i class="bi bi-telephone-fill"></i> +855 12 345 678
-            </div>
-            <div class="contact-item">
-              <i class="bi bi-envelope-fill"></i> info@bookstore.com
-            </div>
-            <div class="contact-item">
-              <i class="bi bi-geo-alt-fill"></i> 123 Book Street,<br />Phnom
-              Penh, Cambodia
-            </div>
+          <div class="col-lg-3 col-md-6 col-6">
+            <div class="sf-col-title">Contact Us</div>
+            <ul class="sf-contact-list">
+              <li><i class="bi bi-telephone"></i> +855 12 345 678</li>
+              <li><i class="bi bi-envelope"></i> info@bookstore.com</li>
+              <li>
+                <i class="bi bi-geo-alt"></i> 123 Book Street, Phnom Penh, Cambodia
+              </li>
+            </ul>
           </div>
-        </div>
-
-        <div class="footer-bottom">
-          &copy; 2024 Book Store. All Rights Reserved.
         </div>
       </div>
-    </footer>
+
+      <div class="sf-bottom">&copy; 2026 Book Store. All Rights Reserved.</div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/books.js"></script>
+    <script src="js/site.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/bookdetail.js"></script>
   </body>
 </html>

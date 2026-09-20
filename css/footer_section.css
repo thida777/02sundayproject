@@ -271,3 +271,14 @@
     max-width: none;
   }
 }
+
+/* ---------- fix: newsletter form overflowed small phones ---------- */
+.sf-newsletter-input {
+  min-width: 0;
+}
+
+@media (max-width: 767px) {
+  .sf-newsletter-form {
+    min-width: 0;
+  }
+}
