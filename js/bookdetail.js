@@ -82,8 +82,7 @@ document.addEventListener("DOMContentLoaded", function () {
     addToCart(book.id, readQty());
   });
   document.getElementById("buy-btn").addEventListener("click", () => {
-    addToCart(book.id, readQty());
-    window.location.href = "shopping_cart.html";
+    buyNow(book.id, readQty());
   });
 
   /* ---------- related books ---------- */

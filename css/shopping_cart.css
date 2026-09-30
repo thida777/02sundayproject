@@ -153,6 +153,13 @@
   text-decoration: underline;
 }
 
+.buynow-note {
+  margin: 0.85rem 0 0;
+  font-size: 0.82rem;
+  color: rgba(244, 234, 216, 0.65);
+  text-align: center;
+}
+
 /* ---------- checkout form ---------- */
 .checkout-card .form-label {
   font-size: 0.85rem;

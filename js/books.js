@@ -592,9 +592,14 @@ function bookCardHTML(book) {
       <div class="book-author${km}">${esc(book.author)}</div>
       <div class="book-buy">
         <div class="book-price">${money(book.price)}</div>
-        <button type="button" class="btn add-cart-btn" data-add="${book.id}">
-          <i class="bi bi-cart-plus"></i> Add to cart
-        </button>
+        <div class="book-buy-actions">
+          <button type="button" class="btn add-cart-btn" data-add="${book.id}">
+            <i class="bi bi-cart-plus"></i> Add to Cart
+          </button>
+          <button type="button" class="btn buy-now-btn" data-buy="${book.id}">
+            Buy Now
+          </button>
+        </div>
       </div>
     </article>`;
 }

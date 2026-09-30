@@ -74,6 +74,25 @@ function addToCart(id, quantity) {
   showToast('"' + book.title + '" was added to your cart.');
 }
 
+/* Buy one book right now, skipping the cart. The book + quantity are
+   kept separately (sessionStorage, not the persistent cart), so
+   checkout.html shows only this book — anything already in the
+   cart is left exactly as it was. */
+function buyNow(id, quantity) {
+  const book = getBook(id);
+  if (!book) return;
+
+  const qty = Math.max(1, Math.min(MAX_QTY, parseInt(quantity, 10) || 1));
+
+  try {
+    sessionStorage.setItem("buyNowItem", JSON.stringify({ id: book.id, quantity: qty }));
+  } catch (err) {
+    /* private/storage-blocked browsing — checkout falls back to the cart */
+  }
+
+  window.location.href = "checkout.html?buynow=1";
+}
+
 function changeQuantity(id, delta) {
   const line = cart.find((item) => item.id === Number(id));
   if (!line) return;
@@ -188,6 +207,13 @@ document.addEventListener("click", function (e) {
   const addBtn = e.target.closest("[data-add]");
   if (addBtn) {
     addToCart(addBtn.dataset.add, addBtn.dataset.qty || 1);
+    return;
+  }
+
+  // "Buy Now" buttons anywhere on the site (book cards, etc.)
+  const buyBtn = e.target.closest("[data-buy]");
+  if (buyBtn) {
+    buyNow(buyBtn.dataset.buy, buyBtn.dataset.qty || 1);
     return;
   }
 

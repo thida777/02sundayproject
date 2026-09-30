@@ -42,9 +42,11 @@ document.addEventListener("DOMContentLoaded", function () {
     const inputs = Array.from(form.querySelectorAll("input, textarea"));
     const results = inputs.map(validateField);
     if (results.includes(false)) {
+      // Each invalid field already shows its own message right below it,
+      // so no extra banner here — just clear any old status and focus it.
+      status.className = "form-status";
+      status.textContent = "";
       inputs[results.indexOf(false)].focus();
-      status.className = "form-status error";
-      status.textContent = "Please fix the highlighted fields and try again.";
       return;
     }
 
